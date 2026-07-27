@@ -1,0 +1,11 @@
+# Team override — ENG1 sprint planning → Jira tickets
+# Committed; applies to everyone using this BMAD control-plane repo.
+
+[workflow]
+persistent_facts = [
+  "This repository (eng1-bmad) is the BMAD control plane: planning/implementation artifacts stay under configured {project-root}/_bmad-output paths. Application source code lives in separate project directories/repos.",
+  "Jira project key is ENG1. During/after sprint planning, create both Epics and Stories via the Atlassian MCP — do not leave ticket creation as a manual follow-up.",
+  "Create epics first, then stories linked to their parent epic. Mirror titles and descriptions from the BMAD sprint/epic artifacts.",
+]
+
+on_complete = "After sprint-status.yaml is generated and validated: use the Atlassian MCP to create Jira issues in project ENG1 for every epic and story in the plan (epics first, then stories linked to their epic). Mirror titles/descriptions from the BMAD artifacts. Report created issue keys and summarize links before exiting."

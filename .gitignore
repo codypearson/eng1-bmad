@@ -1,0 +1,34 @@
+# ─────────────────────────────────────────────────────────────────
+# eng1-bmad — commit customizations + artifacts; ignore installer output
+# ─────────────────────────────────────────────────────────────────
+
+# BMAD / Cursor skills installed by `npx bmad-method install`
+.agents/
+
+# Installer-managed BMAD runtime (config, scripts, modules, manifests)
+_bmad/**
+# Keep team customizations (committed). Personal *.user.toml remain
+# ignored via _bmad/custom/.gitignore (and the rule below).
+!_bmad/custom/
+!_bmad/custom/**
+
+# Personal customization overlays (never commit)
+**/*.user.toml
+
+# BMAD run memory (per-session working memory)
+**/.memlog.md
+
+# Secrets / local env
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
+__pycache__/
+.pytest_cache/
+
+# Note: _bmad-output/ and docs/ are intentionally tracked — they hold
+# shared planning/implementation artifacts and project knowledge.

@@ -1,0 +1,9 @@
+# Team override — ENG1 quick-dev (same delivery rules as bmad-dev-story)
+# Committed; applies to everyone using this BMAD control-plane repo.
+
+[workflow]
+persistent_facts = [
+  "file:{project-root}/_bmad/custom/eng1-dev-delivery-facts.md",
+]
+
+on_complete = "Confirm: (1) ENG1 work subtasks are Done; (2) Review & Test and Deploy subtasks exist under the story/ticket and remain To Do, with Deploy typed as Deploy, Release Notes set, and Deploy description only if manual intervention is needed; (3) git branch is the lowercased ticket key, based on trunk (main/master detected) or the previous story branch as required; (4) changes were committed, pushed, and a PR was opened via GitHub MCP (or gh CLI fallback) with the Jira ticket number in the title. Report Jira keys, branch name, and PR URL before exiting."
