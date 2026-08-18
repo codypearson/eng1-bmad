@@ -1,4 +1,4 @@
-# Team override — ENG1 quick-dev (same delivery rules as bmad-dev-story)
+# Team override — ENG1 implementation (Jira subtasks, git, PR)
 # Committed; applies to everyone using this BMAD control-plane repo.
 
 [workflow]
